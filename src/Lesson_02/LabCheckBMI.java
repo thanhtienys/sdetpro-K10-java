@@ -20,32 +20,38 @@ public class LabCheckBMI {
         // Calculate BMI
         float BMI = (weight / (height * 2)) ;
 
-        //Show BMI
+        //Show calculate result  BMI
         System.out.printf("BMI of you is %f:", BMI);
         System.out.print("\n");
 
-        // Calculate the weight to increase
+        float weightStandard;
+        float weightIncrease;
+        float weightDecrease;
+        //Value min of classify "Normal Weight"
         float BMI_NORMAL_MIN = 18.6f;
-        float weightNormalMin = (BMI_NORMAL_MIN * height * 2);
-        float weightIncrease =(weightNormalMin - weight);
-
-        // Calculate the weight to decrease
+        //Value max of classify "Normal Weight"
         float BMI_NORMAL_MAX = 24.9f;
-        float weightNormalMax = (BMI_NORMAL_MAX * height * 2);
-        float weightDecrease =(weight - weightNormalMax);
+        //Value max of classify "Overweight"
+        float MBI_OVERWEIGHT_MAX = 29.9f;
 
         //Classify of BMI
         if (BMI <= 18.5){
             System.out.println("You are underweight");
-            System.out.printf("You need increase: %f kg" ,+ weightIncrease , "kg");
+                weightStandard = (BMI_NORMAL_MIN * height * 2);
+                weightIncrease = (weightStandard - weight );
+            System.out.printf("You need increase: %f kg to become normal weight " ,+ weightIncrease );
         }else if (BMI <= 24.9) {
             System.out.println(" You are normal weight");
         }else if (BMI <= 29.9) {
             System.out.println("You are overweight");
-            System.out.printf("You need decrease: %f kg" ,+ weightDecrease , "kg");
+                weightStandard = (BMI_NORMAL_MAX * height * 2);
+                weightDecrease = ( weight- weightStandard );
+            System.out.printf("You need decrease: %f kg to get back normal weight " ,+ weightDecrease );
         }else {
             System.out.println("You are obesity");
-            System.out.printf("You need decrease: %f kg" ,+ weightDecrease , "kg");
+                weightStandard = (MBI_OVERWEIGHT_MAX * height * 2);
+                weightDecrease = ( weight- weightStandard );
+            System.out.printf("You need decrease: %f kg to get back overweight" ,+ weightDecrease );
         }
     }
 }
