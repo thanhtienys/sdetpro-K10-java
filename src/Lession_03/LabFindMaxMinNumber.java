@@ -14,21 +14,21 @@ public class LabFindMaxMinNumber {
             lengthArr = scanner.nextInt();
         }while (lengthArr <= 0);
 
-        //Create array number radom
+        //Create and display array number radom
+        System.out.println("My array number radom is:");
         int [] arrNum = new int[lengthArr];
         for (int i = 0; i < lengthArr; i++) {
             int randomNumber = new SecureRandom().nextInt(1000);
             arrNum[i] = randomNumber;
+            System.out.printf("   %d", arrNum[i]);
         }
-
+        //Method 1:
         // Create value max min first time
         int max = arrNum[0];
         int min = arrNum [0];
-        //Display array number random
-        System.out.println("My array number radom is:");
+
+        //Find max min number
         for (int i = 1; i < lengthArr; i++) {
-            System.out.printf("   %d", arrNum[i]);
-            //Find max min number
             if (max < arrNum[i]) {
                 max = arrNum[i];
             }
@@ -36,6 +36,24 @@ public class LabFindMaxMinNumber {
                 min = arrNum[i];
             }
         }
+
+        /*
+        //Method 2:
+        //Sort array from min to max
+        int varTemporary;
+        for (int i = 0; i < (lengthArr - 1) ; i++) {
+            for (int j = (i + 1); j < lengthArr; j++) {
+                if (arrNum[i] > arrNum [j]){
+                    varTemporary = arrNum[i];
+                    arrNum[i] = arrNum[j];
+                    arrNum[j] = varTemporary;
+                }
+            }
+        }
+        System.out.printf("\n Max number is: %d",arrNum[lengthArr-1]);
+        System.out.printf("\n Min number is: %d",arrNum[0]);
+        */
+
         System.out.printf("\n Max number is: %d",max);
         System.out.printf("\n Min number is: %d",min);
     }
