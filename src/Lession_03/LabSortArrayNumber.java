@@ -1,6 +1,7 @@
 package src.Lession_03;
 
 import java.security.SecureRandom;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LabSortArrayNumber {
@@ -21,8 +22,8 @@ public class LabSortArrayNumber {
         for (int i = 0; i < length; i++) {
             int randomNumber = new SecureRandom().nextInt(1000);
             arrNum[i] = randomNumber;
-            System.out.printf("  %d",arrNum[i]);
         }
+        System.out.println(Arrays.toString(arrNum));
 
         //Sort array number
         int varTemporary;
@@ -38,8 +39,6 @@ public class LabSortArrayNumber {
         }
         //Display array number after sorted
         System.out.println("\n My array after sorted:");
-        for (int i = 0; i < length; i++) {
-            System.out.printf("  %d",arrNum[i]);
-        }
+        System.out.println(Arrays.toString(arrNum));
     }
 }
