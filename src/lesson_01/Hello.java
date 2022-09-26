@@ -1,4 +1,4 @@
-package src.Lesson_01;
+package src.lesson_01;
 
 public class Hello {
 

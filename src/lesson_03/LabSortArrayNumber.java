@@ -1,4 +1,4 @@
-package src.Lession_03;
+package src.lesson_03;
 
 import java.security.SecureRandom;
 import java.util.Arrays;

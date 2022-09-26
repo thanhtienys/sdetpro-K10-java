@@ -1,4 +1,4 @@
-package src.Lession_05;
+package src.lesson_05;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class LabCreateSimpleMenu {
         int numMenu = scanner.nextInt();
 
         switch (numMenu) {
-            case 1 -> {
+            case 1:
                 System.out.print("Input position of number want add into list: ");
                 int position = scanner.nextInt();
                 while (position > myList.size()) {
@@ -44,9 +44,11 @@ public class LabCreateSimpleMenu {
                 int numAdd = scanner.nextInt();
                 myList.add(position, numAdd);
                 System.out.println("List after add: " + myList);
-            }
-            case 2 -> System.out.println("List is" + myList);
-            case 3 -> {
+                break;
+            case 2:
+                System.out.println("List is" + myList);
+                break;
+            case 3:
                 int maxNum = myList.get(0);
                 for (int i = 1; i < myList.size(); i++) {
                     if (maxNum < myList.get(i)) {
@@ -54,8 +56,8 @@ public class LabCreateSimpleMenu {
                     }
                 }
                 System.out.println("Maximum number is: " + maxNum);
-            }
-            case 4 -> {
+                break;
+            case 4:
                 int minNum = myList.get(0);
                 for (int i = 1; i < myList.size(); i++) {
                     if (minNum > myList.get(i)) {
@@ -63,8 +65,8 @@ public class LabCreateSimpleMenu {
                     }
                 }
                 System.out.println("Maximum number is: " + minNum);
-            }
-            case 5 -> {
+                break;
+            case 5:
                 System.out.println("Input number need to find: ");
                 int numFind = scanner.nextInt();
                 if (myList.contains(numFind)) {
@@ -72,8 +74,10 @@ public class LabCreateSimpleMenu {
                 } else {
                     System.out.println("Number not exist in list");
                 }
-            }
-            default -> System.out.println("Number has not in Menu");
+                break;
+            default:
+                System.out.println("Number has not in Menu");
+                break;
         }
     }
 }
