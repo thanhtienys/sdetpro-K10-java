@@ -21,7 +21,7 @@ public class AnimalTest {
         System.out.println("List Name and speed of animal join to speed: ");
         System.out.println(listRacing);
 
-        String result = new AnimalController().getResul(listRacing);
+        String result = new AnimalController().getResult(listRacing);
 
         System.out.println("Animal win is : " + result);
     }
