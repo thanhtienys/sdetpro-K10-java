@@ -14,15 +14,13 @@ public class AnimalTest {
         Animal horse = new AnimalHorse();
         Animal horse1 = new AnimalHorse();
 
+        //Add list animal
         List<Animal> animalList = Arrays.asList(tiger, dog, dog2, dog3, horse, horse1);
 
-        //List Racing
-        List<String> listRacing = new AnimalController().getListRacing(animalList);
-        System.out.println("List Name and speed of animal join to speed: ");
-        System.out.println(listRacing);
+        //Get list animal with speed
+        List<Animal> listSpeedAnimal = AnimalController.getListSpeedAnimal(animalList);
 
-        String result = new AnimalController().getResult(listRacing);
-
-        System.out.println("Animal win is : " + result);
+        // Get result
+        System.out.println("Win is : " + AnimalController.getResult(listSpeedAnimal));
     }
 }

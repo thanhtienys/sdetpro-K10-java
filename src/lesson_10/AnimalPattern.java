@@ -3,6 +3,8 @@ package src.lesson_10;
 public class AnimalPattern {
     private String name;
     private int maxSpeed;
+
+    private int speedRacing;
     private boolean fly;
 
     public String getName() {
@@ -17,31 +19,52 @@ public class AnimalPattern {
         return this.fly;
     }
 
-    private AnimalPattern (RegisterRacing registerRacing) {
-        this.name = registerRacing.name;
-        this.maxSpeed = registerRacing.maxSpeed;
-        this.fly = registerRacing.fly;
+    public int getSpeedRacing() {
+        return speedRacing;
     }
 
-    public static class RegisterRacing {
+    @Override
+    public String toString() {
+        return "AnimalPattern{" +
+                "name='" + name + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", speedRacing=" + speedRacing +
+                ", fly=" + fly +
+                '}';
+    }
+
+    private AnimalPattern (Register register) {
+        this.name = register.name;
+        this.maxSpeed = register.maxSpeed;
+        this.fly = register.fly;
+        this.speedRacing = register.speedRacing;
+    }
+
+    public static class Register {
         private String name;
         private int maxSpeed;
         private boolean fly;
+        private int speedRacing;
 
-        public RegisterRacing() {
+        public Register() {
         }
 
-        public RegisterRacing setName(String name) {
+        public Register setSpeedRacing(int speedRacing) {
+            this.speedRacing = speedRacing;
+            return this;
+        }
+
+        public Register setName(String name) {
             this.name = name;
             return this;
         }
 
-        public RegisterRacing setMaxSpeed(int maxSpeed) {
+        public Register setMaxSpeed(int maxSpeed) {
             this.maxSpeed = maxSpeed;
             return this;
         }
 
-        public RegisterRacing setFly(boolean fly) {
+        public Register setFly(boolean fly) {
             this.fly = fly;
             return this;
         }
@@ -50,7 +73,6 @@ public class AnimalPattern {
             return new AnimalPattern(this);
         }
     }
-
 }
 
 
