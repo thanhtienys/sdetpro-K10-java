@@ -5,9 +5,20 @@ public class Employee implements Comparable<Employee> {
     protected String name;
     protected int salary;
 
-    public Employee(String name, int salary) {
+    protected int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Employee(String name, int salary, int age) {
         this.name = name;
         this.salary = salary;
+        this.age = age;
     }
 
     public String getName() {
@@ -31,6 +42,7 @@ public class Employee implements Comparable<Employee> {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
+                ", age=" + age +
                 '}';
     }
 
