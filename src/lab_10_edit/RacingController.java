@@ -5,19 +5,6 @@ import java.util.List;
 
 public class RacingController {
 
-    public Animal getWinner(List<Animal> list){
-
-        list = getOutFly(list);
-
-        Animal winner = list.get(0);
-        for (Animal animal : list) {
-            if(animal.getSpeed() > winner.getSpeed()){
-                winner = animal;
-            }
-        }
-    return winner;
-    }
-
     private List<Animal> getOutFly(List<Animal> list){
 
         List<Animal> getOutFlyList = new ArrayList<>();
@@ -28,6 +15,19 @@ public class RacingController {
         }
         return getOutFlyList;
 
+    }
+
+    public Animal getWinner(List<Animal> list){
+
+        List<Animal> getOutFlyList = getOutFly(list);
+
+        Animal winner = list.get(0);
+        for (Animal animal : getOutFlyList) {
+            if(animal.getSpeed() > winner.getSpeed()){
+                winner = animal;
+            }
+        }
+    return winner;
     }
 
 
