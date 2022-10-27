@@ -7,6 +7,8 @@ public class RacingController {
 
     public Animal getWinner(List<Animal> list){
 
+        list = getOutFly(list);
+
         Animal winner = list.get(0);
         for (Animal animal : list) {
             if(animal.getSpeed() > winner.getSpeed()){

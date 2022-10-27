@@ -29,23 +29,26 @@ public class Animal {
 
     //WRITE-ONLY
 
-    public static class Register(){
+    public static class Register{
         private String name;
         private int speed;
         private boolean isFly;
 
-        public Register();
+        protected Register(){};
 
-        public void setName(String name) {
+        public Register setName(String name) {
             this.name = name;
+            return this;
         }
 
-        public void setSpeed(int speed) {
+        public Register setSpeed(int speed) {
             this.speed = speed;
+            return this;
         }
 
-        public void setFly(boolean fly) {
+        public Register setFly(boolean fly) {
             isFly = fly;
+            return this;
         }
 
         public Animal build(){
