@@ -1,6 +1,13 @@
 package src.lab12_13;
 
+import java.security.SecureRandom;
+
 public class Owl implements FlyAble, MoveAble{
+
+    private int speed;
+    public Owl () {
+        speed = new SecureRandom().nextInt(60);
+    }
     @Override
     public boolean flyAble() {
         return true;
@@ -8,7 +15,7 @@ public class Owl implements FlyAble, MoveAble{
 
     @Override
     public int speed() {
-        return 45;
+        return this.speed;
     }
 
     @Override

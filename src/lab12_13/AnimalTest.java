@@ -10,10 +10,11 @@ public class AnimalTest {
         Controller controller = new Controller();
 
         Dog dog = new Dog();
+        Dog dog1 = new Dog();
         Owl owl = new Owl();
 
-        List flyAbles = controller.flyNonAbles(Arrays.asList(dog, owl));
-
+        List flyAbles = controller.flyNonAbles(Arrays.asList(dog, dog1, owl));
+        System.out.println(flyAbles);
         MoveAble winner = controller.getWinner(flyAbles);
         System.out.println(winner);
 
