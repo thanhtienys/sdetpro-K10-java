@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Test {
-    static Scanner scanner = new Scanner(System.in);
-    static String ISBN, title, author;
-    static int year;
 
     public static void main(String[] args) {
 

@@ -92,20 +92,6 @@ public class Controller {
 
     public static List<Book> findBook(List<Book> bookList) {
 
-//        System.out.println("Input ISBN of book, you want to find: ");
-//        ISBN = scanner.next();
-
-//        boolean isFind = false;
-//        int indexOfBook = 0;
-//        for (int i = 0; i < bookList.size(); i++) {
-//
-//            if (bookList.get(i).getISBN().equals(ISBN)) {
-//                isFind = true;
-//                indexOfBook = i;
-//            }
-//        }
-//      ISBN = inputISBN();
-
         String[] result = findBookISBN(bookList, ISBN = inputISBN());
         boolean isFind = Boolean.parseBoolean(result[0]);
         int indexOfBook = Integer.parseInt(result[1]);
