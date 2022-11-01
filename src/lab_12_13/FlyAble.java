@@ -1,4 +1,4 @@
-package src.lab12_13;
+package src.lab_12_13;
 
 public interface FlyAble {
 
